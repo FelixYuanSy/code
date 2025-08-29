@@ -14,8 +14,8 @@ void ChildWrite(int wfd)
         snprintf(buffer, sizeof(buffer), "I am child , pid: %d, cnt: %d", getpid(), cnt++);
         write(wfd, buffer, strlen(buffer));
         sleep(1);
-        // if (cnt == 5)
-        //     break;
+        if (cnt == 5)
+            break;
     }
 }
 
